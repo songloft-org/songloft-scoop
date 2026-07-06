@@ -1,0 +1,40 @@
+name: Auto Update Buckets
+
+on:
+  schedule:
+    - cron: '0 16 * * *'  # 每天北京时间 00:00 执行（UTC+8）
+  workflow_dispatch:       # 支持手动触发
+
+jobs:
+  checkver:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout bucket repo
+        uses: actions/checkout@v4
+
+      - name: Checkout scoop source (for checkver.ps1)
+        uses: actions/checkout@v4
+        with:
+          repository: ScoopInstaller/Scoop
+          path: scoop-src
+
+      - name: Run checkver and auto-update
+        shell: pwsh
+        run: |
+          & ".\scoop-src\bin\checkver.ps1" * -Dir ".\bucket" -Update
+
+      - name: Commit and push changes
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          $changes = git status --porcelain bucket/
+          if ($changes) {
+            git add bucket/*.json
+            git commit -m "chore: auto-update bucket versions [$(Get-Date -Format 'yyyy-MM-dd')]"
+            git push
+            Write-Host "✅ 版本已更新并推送"
+          } else {
+            Write-Host "ℹ️ 没有版本变更，跳过提交"
+          }
