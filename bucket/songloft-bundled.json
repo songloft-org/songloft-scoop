@@ -17,7 +17,7 @@
     "shortcuts": [
         [
             "songloft_flutter.exe",
-            "Songloft"
+            "Songloft Bundled"
         ]
     ],
     "post_uninstall": [
