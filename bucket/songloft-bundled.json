@@ -1,0 +1,34 @@
+{
+    "version": "2.9.6",
+    "description": "Songloft - Self-hosted music server bundled with Flutter frontend (GUI)",
+    "homepage": "https://github.com/songloft-org/songloft",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/songloft-org/songloft/releases/download/v2.9.6/songloft-bundled-windows-x64.zip",
+            "hash": "e43dd8c88b35e259b15ec15496975ba516ffa98aa0926e227433b73c18a58fa9"
+        }
+    },
+    "conflicts": ["songloft-server", "songloft-player"],
+    "bin": "songloft-server.exe",
+    "shortcuts": [
+        ["songloft_flutter.exe", "Songloft"]
+    ],
+    "post_uninstall": [
+        "if ($purge) {",
+        "    Remove-Item \"$env:APPDATA\\com.songloft\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "}"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/songloft-org/songloft/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/songloft-org/songloft/releases/download/v$version/songloft-bundled-windows-x64.zip"
+            }
+        }
+    }
+}

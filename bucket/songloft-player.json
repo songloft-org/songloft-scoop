@@ -3,6 +3,7 @@
     "description": "Songloft Player - A cross-platform music player",
     "homepage": "https://github.com/songloft-org/songloft-player",
     "license": "Apache-2.0",
+    "conflicts": ["songloft-bundled"],
     "architecture": {
         "64bit": {
             "url": "https://github.com/songloft-org/songloft-player/releases/download/v2.11.3/songloft-windows-x64.zip",
