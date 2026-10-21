@@ -1,13 +1,13 @@
 {
-    "version": "2.13.4",
+    "version": "2.13.5",
     "description": "Songloft Player - A cross-platform music player",
     "homepage": "https://github.com/songloft-org/songloft-player",
     "license": "Apache-2.0",
     "conflicts": "songloft-bundled",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/songloft-org/songloft-player/releases/download/v2.13.4/songloft-windows-x64.zip",
-            "hash": "0df459b56fc0348c28dba847b7756881ab72c51f26fbae9bd6c4d6427fc0c31b"
+            "url": "https://github.com/songloft-org/songloft-player/releases/download/v2.13.5/songloft-windows-x64.zip",
+            "hash": "b0183da83604772b1362cb097093e3f4da88231e67491f7b8184151ea78ed6e4"
         }
     },
     "shortcuts": [
