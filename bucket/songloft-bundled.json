@@ -1,12 +1,12 @@
 {
-    "version": "2.13.8",
+    "version": "2.13.9",
     "description": "Songloft - Self-hosted music server bundled with Flutter frontend (GUI)",
     "homepage": "https://github.com/songloft-org/songloft",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/songloft-org/songloft/releases/download/v2.13.8/songloft-bundled-windows-x64.zip",
-            "hash": "0d1bd7c38777a304d9bc7fc68bed0498c9cec5b48f4b7fdf253997870200ad5f"
+            "url": "https://github.com/songloft-org/songloft/releases/download/v2.13.9/songloft-bundled-windows-x64.zip",
+            "hash": "82923c5ccf4f34089b0c7d8e1ddcd4869a2eff28ea1c86301cafe5decbc33480"
         }
     },
     "conflicts": [
