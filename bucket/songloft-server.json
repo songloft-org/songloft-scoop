@@ -1,13 +1,13 @@
 {
-    "version": "2.13.10",
+    "version": "2.13.11",
     "description": "Songloft - Self-hosted music server (CLI)",
     "homepage": "https://github.com/songloft-org/songloft",
     "license": "Apache-2.0",
     "conflicts": "songloft-bundled",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/songloft-org/songloft/releases/download/v2.13.10/songloft-windows-amd64.exe",
-            "hash": "14e49117437b561646ec6e84d5db928cad408a51b236cd3fee3792350d53f4be",
+            "url": "https://github.com/songloft-org/songloft/releases/download/v2.13.11/songloft-windows-amd64.exe",
+            "hash": "b209d0147d2a2fc1d8c84df193057117b3c8b26a40d80a9f03220d481216f5c0",
             "bin": [
                 [
                     "songloft-windows-amd64.exe",
@@ -16,8 +16,8 @@
             ]
         },
         "arm64": {
-            "url": "https://github.com/songloft-org/songloft/releases/download/v2.13.10/songloft-windows-arm64.exe",
-            "hash": "44ab4294b27f0c9360bc75d7d1646affea0040981489e148fddd1e7dea6a9430",
+            "url": "https://github.com/songloft-org/songloft/releases/download/v2.13.11/songloft-windows-arm64.exe",
+            "hash": "0db78c90d1ee6386c51efda1a68529b41bfa516898c85ad08dfd7914a298f889",
             "bin": [
                 [
                     "songloft-windows-arm64.exe",
